@@ -59,13 +59,13 @@ struct ContentView: View {
         VStack(spacing: 0) {
             // Header with Date Picker
             ZStack(alignment: .bottom) {
-                Color(hex: "#0266A8") // UCSC Blue (slightly lighter)
+                Color(hex: "#FDC700") // UCSC Blue (slightly lighter)
                     .ignoresSafeArea(edges: .top)
 
                 VStack(spacing: 10) {
                     Text("UCSC Facility Schedule")
                         .font(.system(size: 26, weight: .bold, design: .rounded))
-                        .foregroundColor(Color(hex: "#FDC700")) // UCSC Gold
+                        .foregroundColor(.black) // UCSC Gold
                         .padding(.top, 20)
 
                     // Date Picker
@@ -80,13 +80,14 @@ struct ContentView: View {
 
                         DatePicker("", selection: $selectedDate, displayedComponents: [.date])
                             .labelsHidden()
-                            .background(Color(hex: "#FDC700")) // UCSC Gold
+                            .background(Color.blue) // Background color
                             .cornerRadius(8)
                             .padding(.horizontal)
-
+                            .colorScheme(.dark) // Makes the text white in DatePicker's default behavior
                         Button(action: {
                             selectedDate = Calendar.current.date(byAdding: .day, value: 1, to: selectedDate) ?? selectedDate
-                        }) {
+                        })
+                        {
                             Image(systemName: "chevron.right")
                                 .foregroundColor(.white)
                                 .padding()
@@ -94,7 +95,8 @@ struct ContentView: View {
                     }
                     .frame(maxWidth: .infinity)
                     .padding(.vertical, 5)
-                    .background(Color(hex: "0266A8")) // UCSC Gold
+                    .background(Color(hex: "FDC700")) // UCSC Gold
+                    .foregroundColor(.white)
                 }
             }
             .frame(height: 140)
@@ -106,11 +108,14 @@ struct ContentView: View {
                     Text("Select Facility")
                         .font(.headline)
                         .foregroundColor(Color(hex: "#0266A8")) // UCSC Blue
+                        .frame(maxWidth: .infinity, alignment: .center) // Center the text
+
                     Picker("Select Facility", selection: $selectedFacility) {
                         ForEach(facilities, id: \.self) {
                             Text($0)
                         }
                     }
+                    .frame(maxWidth: .infinity, maxHeight: 60, alignment: .center) // Center the picker
                     .pickerStyle(MenuPickerStyle())
                     .padding(.horizontal)
                     .frame(height: 60)
@@ -118,6 +123,7 @@ struct ContentView: View {
                     .cornerRadius(8)
                     .shadow(color: Color.black.opacity(0.1), radius: 5, x: 0, y: 2)
                 }
+                DayView()
             }
             .padding()
             .background(Color(hex: "#F9F6E5").opacity(0.6)) // Soft UCSC Gold background
@@ -126,6 +132,9 @@ struct ContentView: View {
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color(hex: "#F9F6E5").opacity(0.4)) // Light UCSC Gold background
+        .ignoresSafeArea(edges: .bottom)
+        
+        
     }
 }
 
