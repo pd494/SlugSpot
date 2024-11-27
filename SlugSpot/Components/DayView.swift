@@ -7,7 +7,16 @@
 
 import SwiftUI
 
+
 struct DayView: View {
+    
+//    let events: [Event] = [
+//            Event(title: "Math Class", startTime: 9, duration: 2),
+//            Event(title: "Lunch", startTime: 12, duration: 1),
+//            Event(title: "Team Meeting", startTime: 15, duration: 2)
+//        ]
+    
+
     var body: some View {
         ScrollView {
             VStack(alignment: .leading) {
@@ -16,7 +25,7 @@ struct DayView: View {
                         .padding(.vertical, 13) // Adjust spacing for readability
                         .padding(.horizontal, 5)
                         .foregroundColor(Color(hex: "#014E9B")) // Set text color to UCSC Blue
-
+                    
                     Divider() // Add a line between each row
                 }
             }
