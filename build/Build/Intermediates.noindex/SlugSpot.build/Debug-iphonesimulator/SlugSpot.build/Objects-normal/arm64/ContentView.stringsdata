@@ -1,0 +1,32 @@
+{
+  "source": "/Users/prasanthdendukuri/SlugSpot/SlugSpot/ContentView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "UCSC Facility Schedule",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 25
+        }
+      },
+      {
+        "comment": "",
+        "key": "",
+        "location": {
+          "startingColumn": 36,
+          "startingLine": 43
+        }
+      },
+      {
+        "comment": "",
+        "key": "Select Facility",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 72
+        }
+      }
+    ]
+  },
+  "version": 1
+}

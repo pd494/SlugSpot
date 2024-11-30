@@ -1,63 +1,22 @@
 import SwiftUI
 
-import SwiftUI
-
 struct ContentView: View {
-    var facilities = [
-        "Online > Zoom",
-        "West Campus > West Tennis Courts (WTC) > WTC - Court 6",
-        "West Campus > West Tennis Courts (WTC) > WTC - Court 5",
-        "West Campus > West Tennis Courts (WTC) > WTC - Court 3",
-        "West Campus > West Tennis Courts (WTC) > WTC - Court 4",
-        "West Campus > West Tennis Courts (WTC) > WTC - Court 1",
-        "West Campus > West Tennis Courts (WTC) > WTC - Court 2",
-        "Off Campus > Westside Research Park Tennis Courts",
-        "West Campus > West Tennis Courts (WTC)",
-        "West Campus > West Field House",
-        "West Campus > West Sand Courts",
-        "West Campus > West Field",
-        "West Campus",
-        "East Field House Complex > Team Locker Room (Men)",
-        "Vehicles",
-        "East Field House Complex > Team Locker Rooms (Women)",
-        "East Field House Complex > Meeting Spaces > Slug Space",
-        "Online",
-        "East Field House Complex > Multi-Purpose Room",
-        "East Field House Complex > Meeting Spaces",
-        "East Field House Complex > Meeting Spaces > Meeting Room 211A",
-        "East Field House Complex > Martial Arts Studio",
-        "Off Campus > Kaiser Permanente Arena",
-        "East Field House Complex > Jogging Path",
-        "East Field House Complex > Fitness Center",
-        "East Field House Complex > ETC - East Tennis Courts",
-        "East Field House Complex > ETC - East Tennis Courts > ETC - Court 5",
-        "East Field House Complex > ETC - East Tennis Courts > ETC - Court 6",
-        "East Field House Complex > ETC - East Tennis Courts > ETC - Court 4",
-        "East Field House Complex > ETC - East Tennis Courts > ETC - Court 3",
-        "East Field House Complex > ETC - East Tennis Courts > ETC - Court 2",
-        "East Field House Complex > ETC - East Tennis Courts > ETC - Court 1",
-        "East Field House Complex > East Upper Field",
-        "East Field House Complex > East Sand Courts",
-        "East Field House Complex > East Outdoor Basketball Courts",
-        "East Field House Complex > East Lower Field",
-        "East Field House Complex > East Gym",
-        "East Field House Complex",
-        "East Field House Complex > Disc Golf Course",
-        "East Field House Complex > Dance Studio",
-        "East Field House Complex > Activities Room",
-        "East Field House Complex > Meeting Spaces > Conference Room",
-        "East Field House Complex > 50m Pool",
-        "East Field House Complex > 50m Pool > 50m Pool - Deep End Only",
-        "East Field House Complex > 50m Pool > 50m Pool - Shallow End Only"
-    ]
-    @State private var selectedFacility = "West Campus > West Field House"
+    @State private var selectedFacility = Facilities.list[0] // Default to the first facility
     @State private var selectedDate = Date()
+    @State private var events: [Event] = []
+    @State private var dateString: String = {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd"
+        return formatter.string(from: Date())
+    }()
 
-    
-    // #FDC700" gold
+    var dateFormatter: DateFormatter {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd"
+        return formatter
+    }
     var body: some View {
         VStack(spacing: 0) {
-            // Header with Date Picker
             ZStack(alignment: .bottom) {
                 Color(hex: "#FDC700") // UCSC Blue (slightly lighter)
                     .ignoresSafeArea(edges: .top)
@@ -68,10 +27,13 @@ struct ContentView: View {
                         .foregroundColor(.black) // UCSC Gold
                         .padding(.top, 20)
 
-                    // Date Picker
                     HStack {
                         Button(action: {
+                         
                             selectedDate = Calendar.current.date(byAdding: .day, value: -1, to: selectedDate) ?? selectedDate
+                            dateString = (dateFormatter.string(from: selectedDate))
+
+
                         }) {
                             Image(systemName: "chevron.left")
                                 .foregroundColor(.white)
@@ -84,8 +46,14 @@ struct ContentView: View {
                             .cornerRadius(8)
                             .padding(.horizontal)
                             .colorScheme(.dark) // Makes the text white in DatePicker's default behavior
+                            .onChange(of: selectedDate) { oldValue, newValue in
+                                Task {
+                                    await loadEvents()
+                                }
+                            }
                         Button(action: {
                             selectedDate = Calendar.current.date(byAdding: .day, value: 1, to: selectedDate) ?? selectedDate
+                            dateString = (dateFormatter.string(from: selectedDate))
                         })
                         {
                             Image(systemName: "chevron.right")
@@ -95,7 +63,7 @@ struct ContentView: View {
                     }
                     .frame(maxWidth: .infinity)
                     .padding(.vertical, 5)
-                    .background(Color(hex: "FDC700")) // UCSC Gold
+                    .background(Color(hex: "FDC700")) 
                     .foregroundColor(.white)
                 }
             }
@@ -103,41 +71,51 @@ struct ContentView: View {
 
             // Main Content
             VStack(alignment: .leading, spacing: 20) {
-                // Facility Picker
-                VStack(alignment: .leading, spacing: 8) {
-                    Text("Select Facility")
-                        .font(.headline)
-                        .foregroundColor(Color(hex: "#0266A8")) // UCSC Blue
-                        .frame(maxWidth: .infinity, alignment: .center) // Center the text
-
-                    Picker("Select Facility", selection: $selectedFacility) {
-                        ForEach(facilities, id: \.self) {
-                            Text($0)
-                        }
+                Picker("Select Facility", selection: $selectedFacility) {
+                    ForEach(Facilities.list, id: \.self) {
+                        Text($0)
                     }
-                    .frame(maxWidth: .infinity, maxHeight: 60, alignment: .center) // Center the picker
-                    .pickerStyle(MenuPickerStyle())
-                    .padding(.horizontal)
-                    .frame(height: 60)
-                    .background(Color.white)
-                    .cornerRadius(8)
-                    .shadow(color: Color.black.opacity(0.1), radius: 5, x: 0, y: 2)
                 }
-                DayView()
+                .frame(maxWidth: .infinity, maxHeight: 60, alignment: .center)
+                .pickerStyle(MenuPickerStyle())
+                .padding(.horizontal)
+                .frame(height: 60)
+                .background(Color.white)
+                .cornerRadius(8)
+                .shadow(color: Color.black.opacity(0.1), radius: 5, x: 0, y: 2)
+
+                DayView(events: events)
             }
             .padding()
-            .background(Color(hex: "#F9F6E5").opacity(0.6)) // Soft UCSC Gold background
+            .background(Color(hex: "#F9F6E5").opacity(0.6))
 
             Spacer()
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(Color(hex: "#F9F6E5").opacity(0.4)) // Light UCSC Gold background
+        .background(Color(hex: "#F9F6E5").opacity(0.4))
         .ignoresSafeArea(edges: .bottom)
-        
-        
+        .onAppear {
+            Task {
+                await loadEvents()
+            }
+        }
+    }
+    
+    
+    func loadEvents() async {
+        do {
+            let dateString = dateFormatter.string(from: selectedDate)
+            let endDate = dateFormatter.string(from: Calendar.current.date(byAdding: .day, value: 1, to: selectedDate)!)
+
+            events = try await fetchEvents(start: dateString, end: endDate)
+            print(events)
+            
+            // Get start of day
+        } catch {
+            print("Error loading events: \(error)")
+        }
     }
 }
-
 
 // Preview
 
@@ -159,6 +137,8 @@ extension Color {
 
 // TODO: Create a custom ScheduleBlock view
 
-#Preview {
-    ContentView()
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
 }

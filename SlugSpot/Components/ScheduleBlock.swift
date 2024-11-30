@@ -1,18 +1,25 @@
-//
-//  ScheduleBlock.swift
-//  SlugSpot
-//
-//  Created by Prasanth Dendukuri on 11/26/24.
-//
-
 import SwiftUI
 
 struct ScheduleBlock: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
+    let title: String
+    let startTime: String
+    let endTime: String
+    let textColor: Color
 
-#Preview {
-    ScheduleBlock()
+    var body: some View {
+        VStack(alignment: .leading, spacing: 4) {
+            Text(title)
+                .font(.system(size: 16, weight: .bold))
+                .foregroundColor(textColor)
+                .lineLimit(1)
+            
+            Text("\(startTime) - \(endTime)")
+                .font(.system(size: 12))
+                .foregroundColor(.gray)
+        }
+        .padding(8)
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .cornerRadius(8)
+        .shadow(color: Color.black.opacity(0.1), radius: 5, x: 0, y: 2)
+    }
 }

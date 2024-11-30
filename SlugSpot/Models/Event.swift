@@ -1,7 +1,7 @@
 import Foundation
 
 
-struct Event: Decodable {
+struct Event: Identifiable, Decodable {
     let id: String
     let title: String
     let start: String
@@ -11,10 +11,13 @@ struct Event: Decodable {
     let allDay: Bool
 }
 
-func fetchEvents(id: String, start: Date, end: Date) async throws -> [Event] {
-    guard let url = URL(string: "https://campusrec.ucsc.edu/Facility/GetScheduleCustomAppointments?selectedId=dce84fd0-83b4-4dbc-8f0e-5b614adf3f88&start=2024-11-26T00%3A00%3A00-08%3A00&end=2024-11-27T00%3A00%3A00-08%3A00") else {
+func fetchEvents(start: String, end: String) async throws -> [Event] {
+    guard let url = URL(string: "https://campusrec.ucsc.edu/Facility/GetScheduleCustomAppointments?selectedId=dce84fd0-83b4-4dbc-8f0e-5b614adf3f88&start=\(start)T00%3A00%3A00-08%3A00&end=\(end)T00%3A00%3A00-08%3A00") else {
+        throw URLError(.badURL)
     }
-    print("seccccccc ")
+    
+    print("Fetching URL: \(url)") // Debug print
+
 
     let (data, _) = try await URLSession.shared.data(from: url)
     let decoded = try JSONDecoder().decode([Event].self, from: data)

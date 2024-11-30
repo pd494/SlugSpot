@@ -1,0 +1,78 @@
+{
+  "" : {
+    "diagnostics" : "/Users/prasanthdendukuri/SlugSpot/build/Build/Intermediates.noindex/SlugSpot.build/Debug-iphonesimulator/SlugSpot.build/Objects-normal/arm64/SlugSpot-master.dia",
+    "emit-module-dependencies" : "/Users/prasanthdendukuri/SlugSpot/build/Build/Intermediates.noindex/SlugSpot.build/Debug-iphonesimulator/SlugSpot.build/Objects-normal/arm64/SlugSpot-master-emit-module.d",
+    "emit-module-diagnostics" : "/Users/prasanthdendukuri/SlugSpot/build/Build/Intermediates.noindex/SlugSpot.build/Debug-iphonesimulator/SlugSpot.build/Objects-normal/arm64/SlugSpot-master-emit-module.dia",
+    "swift-dependencies" : "/Users/prasanthdendukuri/SlugSpot/build/Build/Intermediates.noindex/SlugSpot.build/Debug-iphonesimulator/SlugSpot.build/Objects-normal/arm64/SlugSpot-master.swiftdeps"
+  },
+  "/Users/prasanthdendukuri/SlugSpot/SlugSpot/Components/DayView.swift" : {
+    "const-values" : "/Users/prasanthdendukuri/SlugSpot/build/Build/Intermediates.noindex/SlugSpot.build/Debug-iphonesimulator/SlugSpot.build/Objects-normal/arm64/DayView.swiftconstvalues",
+    "dependencies" : "/Users/prasanthdendukuri/SlugSpot/build/Build/Intermediates.noindex/SlugSpot.build/Debug-iphonesimulator/SlugSpot.build/Objects-normal/arm64/DayView.d",
+    "diagnostics" : "/Users/prasanthdendukuri/SlugSpot/build/Build/Intermediates.noindex/SlugSpot.build/Debug-iphonesimulator/SlugSpot.build/Objects-normal/arm64/DayView.dia",
+    "index-unit-output-path" : "/SlugSpot.build/Debug-iphonesimulator/SlugSpot.build/Objects-normal/arm64/DayView.o",
+    "llvm-bc" : "/Users/prasanthdendukuri/SlugSpot/build/Build/Intermediates.noindex/SlugSpot.build/Debug-iphonesimulator/SlugSpot.build/Objects-normal/arm64/DayView.bc",
+    "object" : "/Users/prasanthdendukuri/SlugSpot/build/Build/Intermediates.noindex/SlugSpot.build/Debug-iphonesimulator/SlugSpot.build/Objects-normal/arm64/DayView.o",
+    "swift-dependencies" : "/Users/prasanthdendukuri/SlugSpot/build/Build/Intermediates.noindex/SlugSpot.build/Debug-iphonesimulator/SlugSpot.build/Objects-normal/arm64/DayView.swiftdeps",
+    "swiftmodule" : "/Users/prasanthdendukuri/SlugSpot/build/Build/Intermediates.noindex/SlugSpot.build/Debug-iphonesimulator/SlugSpot.build/Objects-normal/arm64/DayView~partial.swiftmodule"
+  },
+  "/Users/prasanthdendukuri/SlugSpot/SlugSpot/Components/ScheduleBlock.swift" : {
+    "const-values" : "/Users/prasanthdendukuri/SlugSpot/build/Build/Intermediates.noindex/SlugSpot.build/Debug-iphonesimulator/SlugSpot.build/Objects-normal/arm64/ScheduleBlock.swiftconstvalues",
+    "dependencies" : "/Users/prasanthdendukuri/SlugSpot/build/Build/Intermediates.noindex/SlugSpot.build/Debug-iphonesimulator/SlugSpot.build/Objects-normal/arm64/ScheduleBlock.d",
+    "diagnostics" : "/Users/prasanthdendukuri/SlugSpot/build/Build/Intermediates.noindex/SlugSpot.build/Debug-iphonesimulator/SlugSpot.build/Objects-normal/arm64/ScheduleBlock.dia",
+    "index-unit-output-path" : "/SlugSpot.build/Debug-iphonesimulator/SlugSpot.build/Objects-normal/arm64/ScheduleBlock.o",
+    "llvm-bc" : "/Users/prasanthdendukuri/SlugSpot/build/Build/Intermediates.noindex/SlugSpot.build/Debug-iphonesimulator/SlugSpot.build/Objects-normal/arm64/ScheduleBlock.bc",
+    "object" : "/Users/prasanthdendukuri/SlugSpot/build/Build/Intermediates.noindex/SlugSpot.build/Debug-iphonesimulator/SlugSpot.build/Objects-normal/arm64/ScheduleBlock.o",
+    "swift-dependencies" : "/Users/prasanthdendukuri/SlugSpot/build/Build/Intermediates.noindex/SlugSpot.build/Debug-iphonesimulator/SlugSpot.build/Objects-normal/arm64/ScheduleBlock.swiftdeps",
+    "swiftmodule" : "/Users/prasanthdendukuri/SlugSpot/build/Build/Intermediates.noindex/SlugSpot.build/Debug-iphonesimulator/SlugSpot.build/Objects-normal/arm64/ScheduleBlock~partial.swiftmodule"
+  },
+  "/Users/prasanthdendukuri/SlugSpot/SlugSpot/ContentView.swift" : {
+    "const-values" : "/Users/prasanthdendukuri/SlugSpot/build/Build/Intermediates.noindex/SlugSpot.build/Debug-iphonesimulator/SlugSpot.build/Objects-normal/arm64/ContentView.swiftconstvalues",
+    "dependencies" : "/Users/prasanthdendukuri/SlugSpot/build/Build/Intermediates.noindex/SlugSpot.build/Debug-iphonesimulator/SlugSpot.build/Objects-normal/arm64/ContentView.d",
+    "diagnostics" : "/Users/prasanthdendukuri/SlugSpot/build/Build/Intermediates.noindex/SlugSpot.build/Debug-iphonesimulator/SlugSpot.build/Objects-normal/arm64/ContentView.dia",
+    "index-unit-output-path" : "/SlugSpot.build/Debug-iphonesimulator/SlugSpot.build/Objects-normal/arm64/ContentView.o",
+    "llvm-bc" : "/Users/prasanthdendukuri/SlugSpot/build/Build/Intermediates.noindex/SlugSpot.build/Debug-iphonesimulator/SlugSpot.build/Objects-normal/arm64/ContentView.bc",
+    "object" : "/Users/prasanthdendukuri/SlugSpot/build/Build/Intermediates.noindex/SlugSpot.build/Debug-iphonesimulator/SlugSpot.build/Objects-normal/arm64/ContentView.o",
+    "swift-dependencies" : "/Users/prasanthdendukuri/SlugSpot/build/Build/Intermediates.noindex/SlugSpot.build/Debug-iphonesimulator/SlugSpot.build/Objects-normal/arm64/ContentView.swiftdeps",
+    "swiftmodule" : "/Users/prasanthdendukuri/SlugSpot/build/Build/Intermediates.noindex/SlugSpot.build/Debug-iphonesimulator/SlugSpot.build/Objects-normal/arm64/ContentView~partial.swiftmodule"
+  },
+  "/Users/prasanthdendukuri/SlugSpot/SlugSpot/Models/Event.swift" : {
+    "const-values" : "/Users/prasanthdendukuri/SlugSpot/build/Build/Intermediates.noindex/SlugSpot.build/Debug-iphonesimulator/SlugSpot.build/Objects-normal/arm64/Event.swiftconstvalues",
+    "dependencies" : "/Users/prasanthdendukuri/SlugSpot/build/Build/Intermediates.noindex/SlugSpot.build/Debug-iphonesimulator/SlugSpot.build/Objects-normal/arm64/Event.d",
+    "diagnostics" : "/Users/prasanthdendukuri/SlugSpot/build/Build/Intermediates.noindex/SlugSpot.build/Debug-iphonesimulator/SlugSpot.build/Objects-normal/arm64/Event.dia",
+    "index-unit-output-path" : "/SlugSpot.build/Debug-iphonesimulator/SlugSpot.build/Objects-normal/arm64/Event.o",
+    "llvm-bc" : "/Users/prasanthdendukuri/SlugSpot/build/Build/Intermediates.noindex/SlugSpot.build/Debug-iphonesimulator/SlugSpot.build/Objects-normal/arm64/Event.bc",
+    "object" : "/Users/prasanthdendukuri/SlugSpot/build/Build/Intermediates.noindex/SlugSpot.build/Debug-iphonesimulator/SlugSpot.build/Objects-normal/arm64/Event.o",
+    "swift-dependencies" : "/Users/prasanthdendukuri/SlugSpot/build/Build/Intermediates.noindex/SlugSpot.build/Debug-iphonesimulator/SlugSpot.build/Objects-normal/arm64/Event.swiftdeps",
+    "swiftmodule" : "/Users/prasanthdendukuri/SlugSpot/build/Build/Intermediates.noindex/SlugSpot.build/Debug-iphonesimulator/SlugSpot.build/Objects-normal/arm64/Event~partial.swiftmodule"
+  },
+  "/Users/prasanthdendukuri/SlugSpot/SlugSpot/Models/Facilities.swift" : {
+    "const-values" : "/Users/prasanthdendukuri/SlugSpot/build/Build/Intermediates.noindex/SlugSpot.build/Debug-iphonesimulator/SlugSpot.build/Objects-normal/arm64/Facilities.swiftconstvalues",
+    "dependencies" : "/Users/prasanthdendukuri/SlugSpot/build/Build/Intermediates.noindex/SlugSpot.build/Debug-iphonesimulator/SlugSpot.build/Objects-normal/arm64/Facilities.d",
+    "diagnostics" : "/Users/prasanthdendukuri/SlugSpot/build/Build/Intermediates.noindex/SlugSpot.build/Debug-iphonesimulator/SlugSpot.build/Objects-normal/arm64/Facilities.dia",
+    "index-unit-output-path" : "/SlugSpot.build/Debug-iphonesimulator/SlugSpot.build/Objects-normal/arm64/Facilities.o",
+    "llvm-bc" : "/Users/prasanthdendukuri/SlugSpot/build/Build/Intermediates.noindex/SlugSpot.build/Debug-iphonesimulator/SlugSpot.build/Objects-normal/arm64/Facilities.bc",
+    "object" : "/Users/prasanthdendukuri/SlugSpot/build/Build/Intermediates.noindex/SlugSpot.build/Debug-iphonesimulator/SlugSpot.build/Objects-normal/arm64/Facilities.o",
+    "swift-dependencies" : "/Users/prasanthdendukuri/SlugSpot/build/Build/Intermediates.noindex/SlugSpot.build/Debug-iphonesimulator/SlugSpot.build/Objects-normal/arm64/Facilities.swiftdeps",
+    "swiftmodule" : "/Users/prasanthdendukuri/SlugSpot/build/Build/Intermediates.noindex/SlugSpot.build/Debug-iphonesimulator/SlugSpot.build/Objects-normal/arm64/Facilities~partial.swiftmodule"
+  },
+  "/Users/prasanthdendukuri/SlugSpot/SlugSpot/SlugSpotApp.swift" : {
+    "const-values" : "/Users/prasanthdendukuri/SlugSpot/build/Build/Intermediates.noindex/SlugSpot.build/Debug-iphonesimulator/SlugSpot.build/Objects-normal/arm64/SlugSpotApp.swiftconstvalues",
+    "dependencies" : "/Users/prasanthdendukuri/SlugSpot/build/Build/Intermediates.noindex/SlugSpot.build/Debug-iphonesimulator/SlugSpot.build/Objects-normal/arm64/SlugSpotApp.d",
+    "diagnostics" : "/Users/prasanthdendukuri/SlugSpot/build/Build/Intermediates.noindex/SlugSpot.build/Debug-iphonesimulator/SlugSpot.build/Objects-normal/arm64/SlugSpotApp.dia",
+    "index-unit-output-path" : "/SlugSpot.build/Debug-iphonesimulator/SlugSpot.build/Objects-normal/arm64/SlugSpotApp.o",
+    "llvm-bc" : "/Users/prasanthdendukuri/SlugSpot/build/Build/Intermediates.noindex/SlugSpot.build/Debug-iphonesimulator/SlugSpot.build/Objects-normal/arm64/SlugSpotApp.bc",
+    "object" : "/Users/prasanthdendukuri/SlugSpot/build/Build/Intermediates.noindex/SlugSpot.build/Debug-iphonesimulator/SlugSpot.build/Objects-normal/arm64/SlugSpotApp.o",
+    "swift-dependencies" : "/Users/prasanthdendukuri/SlugSpot/build/Build/Intermediates.noindex/SlugSpot.build/Debug-iphonesimulator/SlugSpot.build/Objects-normal/arm64/SlugSpotApp.swiftdeps",
+    "swiftmodule" : "/Users/prasanthdendukuri/SlugSpot/build/Build/Intermediates.noindex/SlugSpot.build/Debug-iphonesimulator/SlugSpot.build/Objects-normal/arm64/SlugSpotApp~partial.swiftmodule"
+  },
+  "/Users/prasanthdendukuri/SlugSpot/build/Build/Intermediates.noindex/SlugSpot.build/Debug-iphonesimulator/SlugSpot.build/DerivedSources/GeneratedAssetSymbols.swift" : {
+    "const-values" : "/Users/prasanthdendukuri/SlugSpot/build/Build/Intermediates.noindex/SlugSpot.build/Debug-iphonesimulator/SlugSpot.build/Objects-normal/arm64/GeneratedAssetSymbols.swiftconstvalues",
+    "dependencies" : "/Users/prasanthdendukuri/SlugSpot/build/Build/Intermediates.noindex/SlugSpot.build/Debug-iphonesimulator/SlugSpot.build/Objects-normal/arm64/GeneratedAssetSymbols.d",
+    "diagnostics" : "/Users/prasanthdendukuri/SlugSpot/build/Build/Intermediates.noindex/SlugSpot.build/Debug-iphonesimulator/SlugSpot.build/Objects-normal/arm64/GeneratedAssetSymbols.dia",
+    "index-unit-output-path" : "/SlugSpot.build/Debug-iphonesimulator/SlugSpot.build/Objects-normal/arm64/GeneratedAssetSymbols.o",
+    "llvm-bc" : "/Users/prasanthdendukuri/SlugSpot/build/Build/Intermediates.noindex/SlugSpot.build/Debug-iphonesimulator/SlugSpot.build/Objects-normal/arm64/GeneratedAssetSymbols.bc",
+    "object" : "/Users/prasanthdendukuri/SlugSpot/build/Build/Intermediates.noindex/SlugSpot.build/Debug-iphonesimulator/SlugSpot.build/Objects-normal/arm64/GeneratedAssetSymbols.o",
+    "swift-dependencies" : "/Users/prasanthdendukuri/SlugSpot/build/Build/Intermediates.noindex/SlugSpot.build/Debug-iphonesimulator/SlugSpot.build/Objects-normal/arm64/GeneratedAssetSymbols.swiftdeps",
+    "swiftmodule" : "/Users/prasanthdendukuri/SlugSpot/build/Build/Intermediates.noindex/SlugSpot.build/Debug-iphonesimulator/SlugSpot.build/Objects-normal/arm64/GeneratedAssetSymbols~partial.swiftmodule"
+  }
+}

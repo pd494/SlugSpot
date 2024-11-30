@@ -1,0 +1,16 @@
+{
+  "source": "/Users/prasanthdendukuri/SlugSpot/SlugSpot/Components/ScheduleBlock.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "From: %@ To: %@",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 23
+        }
+      }
+    ]
+  },
+  "version": 1
+}

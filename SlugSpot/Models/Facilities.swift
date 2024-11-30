@@ -1,0 +1,43 @@
+import Foundation
+
+struct Facilities {
+    static let list = [
+        "West Campus > West Field House",
+        "West Campus > West Tennis Courts (WTC) > WTC - Court 6",
+        "West Campus > West Tennis Courts (WTC) > WTC - Court 5",
+        "West Campus > West Tennis Courts (WTC) > WTC - Court 3",
+        "West Campus > West Tennis Courts (WTC) > WTC - Court 4",
+        "West Campus > West Tennis Courts (WTC) > WTC - Court 1",
+        "West Campus > West Tennis Courts (WTC) > WTC - Court 2",
+        "West Campus > West Tennis Courts (WTC)",
+        "West Campus > West Sand Courts",
+        "West Campus > West Field",
+        "West Campus",
+        "East Field House Complex > Multi-Purpose Room",
+        "East Field House Complex > Meeting Spaces",
+        "East Field House Complex > Meeting Spaces > Meeting Room 211A",
+        "East Field House Complex > Martial Arts Studio",
+        "Off Campus > Kaiser Permanente Arena",
+        "East Field House Complex > Fitness Center",
+        "East Field House Complex > ETC - East Tennis Courts",
+        "East Field House Complex > ETC - East Tennis Courts > ETC - Court 5",
+        "East Field House Complex > ETC - East Tennis Courts > ETC - Court 6",
+        "East Field House Complex > ETC - East Tennis Courts > ETC - Court 4",
+        "East Field House Complex > ETC - East Tennis Courts > ETC - Court 3",
+        "East Field House Complex > ETC - East Tennis Courts > ETC - Court 2",
+        "East Field House Complex > ETC - East Tennis Courts > ETC - Court 1",
+        "East Field House Complex > East Upper Field",
+        "East Field House Complex > East Sand Courts",
+        "East Field House Complex > East Outdoor Basketball Courts",
+        "East Field House Complex > East Lower Field",
+        "East Field House Complex > East Gym",
+        "East Field House Complex",
+        "East Field House Complex > Disc Golf Course",
+        "East Field House Complex > Dance Studio",
+        "East Field House Complex > Activities Room",
+        "East Field House Complex > Meeting Spaces > Conference Room",
+        "East Field House Complex > 50m Pool",
+        "East Field House Complex > 50m Pool > 50m Pool - Deep End Only",
+        "East Field House Complex > 50m Pool > 50m Pool - Shallow End Only"
+    ]
+} 
